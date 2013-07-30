@@ -99,7 +99,7 @@ def main(argv):
     for zipfile in ziplist:
         
         try:
-            #unzipExtractFramesDepthUser(zipfile)
+            unzipExtractFramesDepthUser(zipfile)
             resizeDim = 96
             removeNoisyBackground(zipfile[:-4], report, resizeDim)
             
