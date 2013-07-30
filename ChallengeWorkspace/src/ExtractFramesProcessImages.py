@@ -1,6 +1,6 @@
 import sys, getopt, glob, os, glob
 from zipfile import ZipFile
-from subprocess import Popen, call
+from subprocess import call
 from PIL import Image
 from datetime import datetime
 
@@ -25,8 +25,8 @@ def removeNoisyBackground(unzipFolder_path, report, resizeDim):
             elif 'user_frames' in item:
                 user_frames_path_list = glob.glob('{}/*.png'.format(item))
         
-    depth_frames_path_list = ['/Users/zhenzhou/Desktop/KaggleChallenge/data/training1/Sample00007/Sample00007_depth_frames/Sample00007_depth-0029.png']
-    user_frames_path_list = ['/Users/zhenzhou/Desktop/KaggleChallenge/data/training1/Sample00007/Sample00007_user_frames/Sample00007_user-0029.png']
+    #depth_frames_path_list = ['/Users/zhenzhou/Desktop/KaggleChallenge/data/training1/Sample00007/Sample00007_depth_frames/Sample00007_depth-0029.png']
+    #user_frames_path_list = ['/Users/zhenzhou/Desktop/KaggleChallenge/data/training1/Sample00007/Sample00007_user_frames/Sample00007_user-0029.png']
     
     if len(depth_frames_path_list) != len(user_frames_path_list):
         print 'depth frames and user frames size not equal'
@@ -90,7 +90,7 @@ def main(argv):
         folder_path += '/'
     
     ziplist = glob.glob(folder_path + '*.zip')
-    ziplist = ['/Users/zhenzhou/Desktop/KaggleChallenge/data/training1/Sample00007.zip']
+    #ziplist = ['/Users/zhenzhou/Desktop/KaggleChallenge/data/training1/Sample00007.zip']
     
     report = open(report_path, 'a')
     dt = datetime(1,1,1)
